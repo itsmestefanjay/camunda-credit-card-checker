@@ -18,3 +18,5 @@ The respective dmn table returns a status code red, yellow or green based on the
 - go to `localhost:8083` and login as `admin:admin`
 - start a task from the task list and check the log output
 - if you have an enterprise licence you can also check the task history in the cockpit app
+
+NOTE: the credit card data is just randomly generated numbers, no actual credit card data is used here

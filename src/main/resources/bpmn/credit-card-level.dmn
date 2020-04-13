@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" id="Definitions_0r0wnjp" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.7.1">
+  <decision id="cc_level" name="Credit Card Level">
+    <decisionTable id="decisionTable_1">
+      <input id="InputClause_1tt81cc">
+        <inputExpression id="LiteralExpression_1ty6497" typeRef="long">
+          <text>card.daysUntilExpiration</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="Card Status" name="cardStatus" typeRef="string" />
+      <rule id="DecisionRule_0oioacg">
+        <inputEntry id="UnaryTests_1i5n7li">
+          <text>&gt; 90</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05cf05m">
+          <text>"green"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bzqy8l">
+        <inputEntry id="UnaryTests_0i2lg32">
+          <text>[0..90]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0v7nzbc">
+          <text>"yellow"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hdcxa1">
+        <inputEntry id="UnaryTests_13676uv">
+          <text>&lt; 0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1iahfzd">
+          <text>"red"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

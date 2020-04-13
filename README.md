@@ -20,3 +20,10 @@ The respective dmn table returns a status code red, yellow or green based on the
 - if you have an enterprise licence you can also check the task history in the cockpit app
 
 NOTE: the credit card data is just randomly generated numbers, no actual credit card data is used here
+
+## Dependencies
+- Camunda BPM 7.12
+- Spring Boot 2.2.5
+- Java 11
+- Apache Commons Lang 3.10
+- H2 Database 1.4.200

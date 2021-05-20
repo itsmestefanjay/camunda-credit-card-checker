@@ -5,6 +5,9 @@ BPMN offers the possibility to run multiple tasks in parallel, iterating over a 
 This process iterates over a huge amount of existing customer credit cards and checks if they are expired to either 
 inform the customer to update it or lock the account
 
+Note: true parallelism is hard to achieve when camunda writes into the same tables where locking happens -> therefore 
+all instances run exclusive in this case
+
 ![cc_checker|300x200,20%](src/main/resources/bpmn/credit-card-update.png)
 
 The respective dmn table returns a status code red, yellow or green based on the expiration days:
@@ -22,8 +25,8 @@ The respective dmn table returns a status code red, yellow or green based on the
 NOTE: the credit card data is just randomly generated numbers, no actual credit card data is used here
 
 ## Dependencies
-- Camunda BPM 7.12
-- Spring Boot 2.2.5
+- Camunda BPM 7.15
+- Spring Boot 2.4.3
 - Java 11
 - Apache Commons Lang 3.10
 - H2 Database 1.4.200

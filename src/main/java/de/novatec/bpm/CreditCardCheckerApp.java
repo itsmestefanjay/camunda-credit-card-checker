@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
-@EnableProcessApplication("processApplication")
+@EnableProcessApplication("creditCardChecker")
 @Import({CamundaConfig.class})
-public class ProcessApplication {
+public class CreditCardCheckerApp {
     public static void main(final String... args) {
-        SpringApplication.run(ProcessApplication.class, args);
+        SpringApplication.run(CreditCardCheckerApp.class, args);
     }
 }

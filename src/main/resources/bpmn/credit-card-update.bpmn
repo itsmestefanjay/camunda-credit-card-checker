@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0ms3d60" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.7.1">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0ms3d60" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.8.0">
   <bpmn:process id="credit-card-update" name="Credit Card Update" isExecutable="true" camunda:historyTimeToLive="P1D">
-    <bpmn:subProcess id="Activity_0slczlf" name="Check credit card" camunda:asyncBefore="true">
+    <bpmn:subProcess id="Activity_0slczlf" name="Check credit card">
       <bpmn:incoming>Flow_0hrzj9v</bpmn:incoming>
       <bpmn:outgoing>Flow_16y7gc7</bpmn:outgoing>
-      <bpmn:multiInstanceLoopCharacteristics camunda:collection="creditCardList" camunda:elementVariable="card" />
+      <bpmn:multiInstanceLoopCharacteristics camunda:asyncBefore="true" camunda:collection="creditCardList" camunda:elementVariable="card" />
       <bpmn:startEvent id="Event_0p5u9r6">
         <bpmn:outgoing>Flow_0moxgd8</bpmn:outgoing>
       </bpmn:startEvent>

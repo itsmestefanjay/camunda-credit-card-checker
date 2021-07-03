@@ -26,7 +26,7 @@ NOTE: the credit card data is just randomly generated numbers, no actual credit 
 
 ## Dependencies
 - Camunda BPM 7.15
-- Spring Boot 2.4.3
+- Spring Boot 2.4
 - Java 11
-- Apache Commons Lang 3.10
+- Apache Commons Lang 3.12
 - H2 Database 1.4.200

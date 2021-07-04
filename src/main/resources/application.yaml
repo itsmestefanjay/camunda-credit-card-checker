@@ -1,6 +1,5 @@
 spring.application.name: processApplication
 server.port: 8083
-
 camunda:
   bpm:
     datasource:

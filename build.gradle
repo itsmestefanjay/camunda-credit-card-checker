@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'idea'
-    id "org.springframework.boot" version "2.4.8"
+    id "org.springframework.boot" version "2.6.1"
 }
 
 group 'de.novatec.bpm'
@@ -14,8 +14,8 @@ repositories {
 }
 
 dependencies {
-    implementation "org.springframework.boot:spring-boot-dependencies:2.4.8"
-    implementation "org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-webapp:7.15.0"
+    implementation "org.springframework.boot:spring-boot-dependencies:2.6.1"
+    implementation "org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-webapp:7.16.0"
     implementation "com.h2database:h2:1.4.200"
     implementation "org.apache.commons:commons-lang3:3.12.0"
 }
